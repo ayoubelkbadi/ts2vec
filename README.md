@@ -14,29 +14,21 @@ The recommended requirements for TS2Vec are specified as follows:
 * statsmodels==0.12.2
 * Bottleneck==1.3.2
 
-The dependencies can be installed by:
+The dependencies can be installed (with a terminal for example) by:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Data
 
-The datasets can be obtained and put into `datasets/` folder in the following way:
+As you can specify the file path of you data with the class InsAIghtsv2, it is possible to place your datsets wherever you want.
 
-* [128 UCR datasets](https://www.cs.ucr.edu/~eamonn/time_series_data_2018) should be put into `datasets/UCR/` so that each data file can be located by `datasets/UCR/<dataset_name>/<dataset_name>_*.csv`.
-* [30 UEA datasets](http://www.timeseriesclassification.com) should be put into `datasets/UEA/` so that each data file can be located by `datasets/UEA/<dataset_name>/<dataset_name>_*.arff`.
-* [3 ETT datasets](https://github.com/zhouhaoyi/ETDataset) should be placed at `datasets/ETTh1.csv`, `datasets/ETTh2.csv` and `datasets/ETTm1.csv`.
-* [Electricity dataset](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014) should be preprocessed using `datasets/preprocess_electricity.py` and placed at `datasets/electricity.csv`.
-* [Yahoo dataset](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70) should be preprocessed using `datasets/preprocess_yahoo.py` and placed at `datasets/yahoo.pkl`.
-* [KPI dataset](http://test-10056879.file.myqcloud.com/10056879/test/20180524_78431960010324/KPI%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E5%86%B3%E8%B5%9B%E6%95%B0%E6%8D%AE%E9%9B%86.zip) should be preprocessed using `datasets/preprocess_kpi.py` and placed at `datasets/kpi.pkl`.
+## Usage Streamlit platform (app.py)
 
+To run the Streamlit platform locally (with a terminal for example), do:
 
-## Usage
-
-To train and evaluate TS2Vec on a dataset, run the following command:
-
-```train & evaluate
-python train.py <dataset_name> <run_name> --loader <loader> --batch-size <batch_size> --repr-dims <repr_dims> --gpu <gpu> --eval
+```
+streamlit run app.py
 ```
 The detailed descriptions about the arguments are as following:
 | Parameter name | Description of parameter |
